@@ -22,25 +22,25 @@ class Button : public UI<Button>
 
 	void erase_background()
 	{
-	    println("erasing button background...");
+		println("erasing button background...");
 	}
 	void paint()
 	{
-	    println("painting button...");
+		println("painting button...");
 	}
 };
 
 class CheckBox : public UI<CheckBox>
 {
-    friend class UI<CheckBox>;
-    
+	friend class UI<CheckBox>;
+
 	void erase_background()
 	{
-	    println("erasing checkbox background...");
+		println("erasing checkbox background...");
 	}
 	void paint()
 	{
-	    println("painting checkbox...");
+		println("painting checkbox...");
 	}
 };
 
@@ -54,7 +54,7 @@ int main()
 {
 	Button b;
 	CheckBox c;
-	
+
 	draw_ui(b);
 	draw_ui(c);
 }
