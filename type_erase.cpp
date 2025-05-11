@@ -56,8 +56,8 @@ class UI
 	shared_ptr<UI_base> p;
 
 public:
-	template <typename T>
-	UI(T&& obj): p {make_unique<UI_impl<T>>(std::forward<T>(obj))} {}
+	template <typename O>
+	UI(O&& obj): p {make_unique<UI_impl<std::decay_t<O>>>(std::forward<O>(obj))} {}
 
 	void draw()
 	{
