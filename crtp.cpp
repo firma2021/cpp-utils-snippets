@@ -58,3 +58,6 @@ int main()
 	draw_ui(b);
 	draw_ui(c);
 }
+
+// CRTP用来实现静态多态
+// 如果想把UI类放到vector等容器中，需要让它继承一个有virtual void draw() = 0;的父类
